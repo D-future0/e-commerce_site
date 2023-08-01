@@ -1,0 +1,189 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    height: 200vh;
+    background-color: rgb(238, 238, 238);
+}
+/*** header setup ***/
+.main-header{
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 5px;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+}
+/* logo image */
+.bye-mie{
+    width: 100px;
+    padding-left: 5px;
+}
+/* search engine */
+.search_icon{
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.search_icon:hover{
+    background-color: #FF0000;
+    color: #FEC500;
+    border-radius: 3px;
+}
+.searchBar2, .searchBar1{
+    display: none;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    transition: all 1s ease-in-out;
+}
+.display_searchBar2{
+    display: flex;
+}
+#search{
+    width: 15rem;
+    height: 1.5rem;
+    border-radius: 7px;
+    border: 1px solid rgb(90, 90, 90);
+}
+#search:hover{
+    border: 1px solid #FF0000;
+}
+/* navigation line */
+.links{
+    display: flex;
+    text-align: center;
+    margin: 5px 0xp 0px 0px;
+    padding: 0px;
+}
+.links li{
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0rem 0.5rem;
+}
+.links li a{
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    font-size: 20px;
+    padding: 2px 4px;
+}
+.links li:hover{
+    color: #FEC500;
+    border-radius: 3px;
+}
+.links li a:hover{
+    color: #FEC500;
+    border-radius: 3px;
+}
+/* sub-links setup */
+.sub-links{
+    display: none;
+    grid-template-columns: auto;
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 0rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+ .sub-links li{
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    color: rgb(11, 12, 0);
+}
+.hover-link:hover .sub-links{display: grid;}
+/** ads & promo setup **/
+.ads-promo{
+    width: 100vw;
+    margin-top: 4rem;
+    text-align: center;
+}
+.ads-image{
+    width: 100%;
+}
+/**  **/
+.menu-ads-container{
+    /* display: grid;
+    place-items: center; */
+    width: 90vw;
+    padding-top: 10px;
+    padding-left: 1rem;
+}
+.advanceMenu{
+    background-color: white;
+    max-width: 300px;
+    border-radius: 10px;
+    
+}
+.advanceMenu-opts{
+    display: flex;
+}
+.advanceMenu-opts li{
+    padding: 0.5rem 0.5rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+.advanceMenu-opts li:hover{
+    color: #FEC500;
+}
+.tab-opts{
+    display: none;
+    padding-right: 2rem;
+}
+.tab-opts ul{
+    list-style: none;
+    border-left: 2px solid rgb(90, 90, 90);
+}
+.active{
+    display: block;
+    color: #FEC500;
+}
+.tab-container{
+    list-style: none;
+}
+.tab-container li .tab{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0%;
+    margin: 0%;
+}
+.tab-container li .tab:hover{
+    color: #FEC500;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 800px){
+    
+}
+@media screen and (min-width: 800px) {
+    .search_icon, .searchBar2{
+        display: none;
+    }
+    .searchBar1{
+        display: flex;
+        padding-top: 1rem;
+    }
+    .ads-image{
+        width: 85%;
+        height: 80px;
+        border-radius: 15px;
+    }
+}

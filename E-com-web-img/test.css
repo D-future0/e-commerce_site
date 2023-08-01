@@ -1,0 +1,29 @@
+/* body{
+    display: block;
+    text-align: center;
+}
+.searchBar{
+    display: none;
+}
+.display_searchBar{
+    display: block;
+} */
+ul{
+    list-style: none;
+}
+.links{
+    display: flex;
+    /* padding: 1rem 2rem; */
+}
+.links li{
+    padding: 0rem 1rem;
+}
+.sub-links{
+    display: block;
+    position: absolute;
+    padding: 0.5 rem 0rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.sub-links li{
+    padding: 0.5rem 1rem;
+}
