@@ -12,6 +12,7 @@ body{
     width: 100%;
     background-color: white;
     box-shadow: 0px 0px 5px;
+    z-index: 2;
 }
 .nav-container{
     display: flex;
@@ -89,7 +90,7 @@ body{
     background-color: white;
     padding: 0.5rem 0rem;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    z-index: 3;
 }
  .sub-links li{
     text-align: center;
@@ -100,6 +101,10 @@ body{
 }
 .hover-link:hover .sub-links{display: grid;}
 /** ads & promo setup **/
+.firstSegment{
+    display: grid;
+    place-items: center;
+}
 .ads-promo{
     width: 100vw;
     margin-top: 4rem;
@@ -108,13 +113,10 @@ body{
 .ads-image{
     width: 100%;
 }
-/**  **/
+/** menu-ads setup **/
 .menu-ads-container{
-    /* display: grid;
-    place-items: center; */
-    width: 90vw;
+    width: 85vw;
     padding-top: 10px;
-    padding-left: 1rem;
 }
 .advanceMenu{
     background-color: white;
@@ -158,6 +160,56 @@ body{
 }
 .tab-container li .tab:hover{
     color: #FEC500;
+}
+/** item card **/
+.items{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 85vw;
+    height: 370px;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    background-color: white;
+    overflow: hidden;    
+}
+.card-container{
+    width: 225px;
+    border-radius: 10px;
+    font-family: cursive;
+    text-transform: capitalize;
+    transition: all 0.5ms linear;
+    cursor: context-menu;
+    margin: 0px 15px;
+}
+.card-container:hover{
+    transform: scale(1.015);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+.item-img{
+    width: 100%;
+    border-radius: 10px;
+}
+.info-container{
+    padding-left: 2rem;
+    line-height: 0.5rem;
+}
+.button-container{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.btn{
+    width: 10rem;
+    height: 2rem;
+    background-color: #FF0000;
+    color: #FEC500;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    border: 3px solid #FEC500;
 }
 
 
