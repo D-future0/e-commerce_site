@@ -61,6 +61,7 @@ body{
     text-align: center;
     margin: 5px 0xp 0px 0px;
     padding: 0px;
+    cursor: context-menu;
 }
 .links li{
     list-style: none;
@@ -104,6 +105,7 @@ body{
 .firstSegment{
     display: grid;
     place-items: center;
+    padding-top: 10px;
 }
 .ads-promo{
     width: 100vw;
@@ -114,17 +116,24 @@ body{
     width: 100%;
 }
 /** menu-ads setup **/
-.menu-ads-container{
-    width: 85vw;
-    padding-top: 10px;
-}
 .advanceMenu{
     background-color: white;
-    max-width: 300px;
     border-radius: 10px;
-    
 }
 .advanceMenu-opts{
+    width: 100%;
+    text-align: center;
+}
+.tab{
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 16px;
+}
+.tab:hover{
+    color: #FEC500;
+    background-color: #FF0000;
+}
+/* .advanceMenu-opts{
     display: flex;
 }
 .advanceMenu-opts li{
@@ -160,21 +169,35 @@ body{
 }
 .tab-container li .tab:hover{
     color: #FEC500;
-}
+} */
 /** item card **/
 .items{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     width: 85vw;
     height: 370px;
-    border-radius: 10px;
-    margin-top: 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: white;
-    overflow: hidden;    
+    /* overflow: auto;     */
+}
+.titles{ 
+    text-align: center;
+    width: 85vw;
+    background-color: #FF0000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0%;
+    padding: 0%;
+    height: 1.5rem;
+    color: #FEC500;
+    font-family: arial;
+    cursor: context-menu;
 }
 .card-container{
-    width: 225px;
+    width: 210px;
     border-radius: 10px;
     font-family: cursive;
     text-transform: capitalize;
@@ -210,6 +233,20 @@ body{
 }
 .btn:hover{
     border: 3px solid #FEC500;
+}
+/* see all items */
+.see-All{
+font-size: 18px;
+text-align: right;
+margin-top: 0%;
+padding-top: 0%;
+line-height: 0%;
+cursor: pointer;
+}
+.see-All-btn{
+    border: none;
+    background: none;
+    font-size: 15px;
 }
 
 

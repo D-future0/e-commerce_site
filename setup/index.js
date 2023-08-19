@@ -42,11 +42,43 @@ advanceMenu.addEventListener(`dblclick`, ()=>{
         /** display setup **/
  const expressDelivery = document.querySelector(`.expressDelivery`);
  const promotions = document.querySelector(`.promotions`);
+ const seeAllItem = document.querySelectorAll(`.see-All-btn`);
+ const expressTitle = document.querySelector(`.express`);
+ const promoContainer = document.querySelector(`.promo-container`);
+ const expressContainer = document.querySelector(`.express-container`);
  
+ seeAllItem.forEach(function (btn) {
+     btn.addEventListener(`click`, function(e) {
+    const click = e.currentTarget.dataset.id
+    const expressId = `seeAll-experess`
+    const promoId =`seeAll-promo`
+    if(click === expressId){
+        expressDelivery.style.height= `100vh`
+        promoContainer.style.display= `none`
+        btn.style.visibility= `hidden`
+    }
+    if(click === promoId){
+        promotions.style.height= `100vh`
+        expressContainer.style.display= `none`
+        btn.style.visibility= `hidden`
+    }
+
+});
+ });
+
 window.addEventListener(`DOMContentLoaded`, function (){
     displayAllExpressDeliveryItems(items)
     displayAllPromotionItems(items)
- });
+ }); 
+
+//  see all items
+// const seeAllExpressItem = document.querySelector(`#seeAll-experess`);
+// const seeAllpromoItem = document.querySelector(`#seeAll-promo`);
+// console.log(seeAllItem)
+// seeAllItem.addEventListener(`click`, function (event) {
+//     const btn = event.currentTarget.dataset.id
+//     console.log(btn)
+// });
 
  /** functions **/
 //  functions all items function
