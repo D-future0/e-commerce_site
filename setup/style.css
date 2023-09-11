@@ -173,11 +173,10 @@ body{
 /** item card **/
 .items{
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
     width: 85vw;
-    height: 370px;
+    height: 350px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: white;
@@ -234,25 +233,112 @@ body{
 .btn:hover{
     border: 3px solid #FEC500;
 }
+
 /* see all items */
-.see-All{
+.display-all-less{
+display: flex;
+justify-content: space-between;
+width: 100%;
 font-size: 18px;
-text-align: right;
 margin-top: 0%;
 padding-top: 0%;
 line-height: 0%;
-cursor: pointer;
 }
-.see-All-btn{
+.see-All-btn,.see-Less-btn{
     border: none;
     background: none;
     font-size: 15px;
+    cursor: pointer;
+}
+/* cart style */
+/* .cart-section{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    transition: all 1000ms ease;
+    transform: translate(200%);
+
+}
+.show-cart{
+    transform: translate(100%);
+} */
+aside{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* display: grid;
+    grid-template-rows: auto;
+    row-gap: 1rem; */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(204, 203, 203);
+    transition: all 1000ms ease;
+    transform: translate(200%);
+    z-index: 2;
+}
+.show-sidebar{
+    transform: translate(0%);
 }
 
-
-
-
-
+.close-cart-section{
+    padding-right: 1rem;
+    border: none;
+    /* padding: 1rem; */
+    background-color: transparent;
+    transition: all 100ms linear;
+}
+.close-sidebar:hover{
+    transform: scale(1.5);
+}
+.fi-sr-cross{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(249, 6, 6);
+}
+.cart-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 56px;
+}
+/* cart container section */
+.cart-container{
+    margin: 1rem ;
+    width: 80%;
+}
+.cart-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 16px;
+}
+.cart-item .img-container{
+    width: 100px;
+    height: 100px;
+    text-align: left;
+}
+.cart-item .item-img{
+    width: auto;
+    height: 100px;
+}
+.cart-item .info-container{
+    width: 150px;
+}
+.cart-item form{
+    width: 150px;
+}
+.cart-item #number{
+    width: 2rem;
+}
 
 
 

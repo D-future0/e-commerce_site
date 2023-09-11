@@ -11,6 +11,25 @@ const searchBar = document.querySelector(`.searchBar2`);
 searchIcon.addEventListener(`click`, function(){
     searchBar.classList.toggle(`display_searchBar2`)
 });
+/* cart toggle */
+// const cartBtn = document.querySelector('.my-cart');
+// const myCart = document.querySelector('.cart-section');
+// const showCart = document.querySelector('.show-cart');
+
+// cartBtn.addEventListener(`click`, function(){
+//     myCart.classList.toggle(`showCart`);
+//     console.log(myCart)
+// });
+const cartBtn = document.querySelector('.my-cart');
+const closeCartSection = document.querySelector(".close-cart-section");
+const cartSection = document.querySelector(".cart-section");
+
+cartBtn.addEventListener("click", function(){
+    cartSection.classList.toggle("show-sidebar")
+})
+closeCartSection.addEventListener("click", function(){
+    cartSection.classList.remove("show-sidebar")
+})
 /* advance Menu setup*/
 const advanceMenu = document.querySelector(`.advanceMenu`);
 const tabs = document.querySelectorAll(`.tab`)
@@ -42,43 +61,85 @@ advanceMenu.addEventListener(`dblclick`, ()=>{
         /** display setup **/
  const expressDelivery = document.querySelector(`.expressDelivery`);
  const promotions = document.querySelector(`.promotions`);
- const seeAllItem = document.querySelectorAll(`.see-All-btn`);
  const expressTitle = document.querySelector(`.express`);
+ const seeAllItem = document.querySelectorAll(`.see-All`);
+ const allItems = document.querySelectorAll(`.items`);
  const promoContainer = document.querySelector(`.promo-container`);
  const expressContainer = document.querySelector(`.express-container`);
  
  seeAllItem.forEach(function (btn) {
      btn.addEventListener(`click`, function(e) {
-    const click = e.currentTarget.dataset.id
-    const expressId = `seeAll-experess`
+    let click = e.currentTarget.dataset.id
+    const expressId = `seeAll-express`
     const promoId =`seeAll-promo`
-    if(click === expressId){
-        expressDelivery.style.height= `100vh`
-        promoContainer.style.display= `none`
-        btn.style.visibility= `hidden`
-    }
-    if(click === promoId){
-        promotions.style.height= `100vh`
-        expressContainer.style.display= `none`
-        btn.style.visibility= `hidden`
-    }
-
+    
+        if(click === expressId && btn.innerHTML === `See all` ){
+            expressDelivery.style.height= `100vh`
+            promoContainer.style.display= `none`
+            btn.innerHTML = `See less`
+        }
+        else if(click === promoId && btn.innerHTML === `See all` ){
+            promotions.style.height= `100vh`
+            expressContainer.style.display= `none`
+            btn.innerHTML = `See less`
+        }
+        else{
+            expressDelivery.style.height= `350px`
+            promotions.style.height= `350px`
+            expressContainer.style.display= `inline`
+            promoContainer.style.display= `inline`
+            btn.innerHTML = `See all`
+        }
 });
  });
+
+//  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.addEventListener(`DOMContentLoaded`, function (){
     displayAllExpressDeliveryItems(items)
     displayAllPromotionItems(items)
- }); 
 
-//  see all items
-// const seeAllExpressItem = document.querySelector(`#seeAll-experess`);
-// const seeAllpromoItem = document.querySelector(`#seeAll-promo`);
-// console.log(seeAllItem)
-// seeAllItem.addEventListener(`click`, function (event) {
-//     const btn = event.currentTarget.dataset.id
-//     console.log(btn)
-// });
+    const addToCartBtn = document.querySelectorAll(`.btn`);
+    const mything = document.querySelectorAll(`.item-name`);
+    console.log(mything)
+    addToCartBtn.forEach(btn => {
+        btn.addEventListener(`click`, function(btn){
+            const selectedItem = btn.currentTarget.parentElement.parentElement;
+            const element = selectedItem.firstElementChild.nextSibling.nextSibling
+            console.log(element)
+        })
+    })
+
+ }); 
 
  /** functions **/
 //  functions all items function
